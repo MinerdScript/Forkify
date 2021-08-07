@@ -43,7 +43,7 @@ class AddRecipeView extends View {
   }
 
   _generateMarkup() {
-    markup = `
+    return `
     <div class="upload__column">
     <h3 class="upload__heading">Recipe data</h3>
     <label>Title</label>
@@ -107,7 +107,6 @@ class AddRecipeView extends View {
     </svg>
     <span>Upload</span>
   </button>`;
-    return markup;
   }
 }
 

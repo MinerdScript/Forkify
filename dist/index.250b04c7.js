@@ -2392,7 +2392,7 @@ class AddRecipeView extends _ViewJsDefault.default {
     });
   }
   _generateMarkup() {
-    markup = `
+    return `
     <div class="upload__column">
     <h3 class="upload__heading">Recipe data</h3>
     <label>Title</label>
@@ -2456,7 +2456,6 @@ class AddRecipeView extends _ViewJsDefault.default {
     </svg>
     <span>Upload</span>
   </button>`;
-    return markup;
   }
 }
 exports.default = new AddRecipeView();
