@@ -1,0 +1,16 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _ViewJs = require('./View.js');
+var _ViewJsDefault = _parcelHelpers.interopDefault(_ViewJs);
+var _previewView = require('./previewView');
+var _previewViewDefault = _parcelHelpers.interopDefault(_previewView);
+require('url:../../img/icons.svg');
+class ResultView extends _ViewJsDefault.default {
+  _parentElement = document.querySelector('.results');
+  _errorMessage = 'No recipes found for your query, try again!';
+  _message = '';
+  _generateMarkup() {
+    return this._data.map(result => _previewViewDefault.default.render(result, false)).join('');
+  }
+}
+exports.default = new ResultView();

@@ -69,3 +69,12 @@ body {
     border-radius: 0;
   }
 }
+
+.scroll {
+  display: block;
+  border: 0px solid red;
+  padding: 5px;
+  margin-top: 5px;
+  width: 100%;
+  overflow-y: scroll;
+}

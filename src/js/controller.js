@@ -26,6 +26,7 @@ const fixSvgSprite = function () {
     'icon-bookmark',
     'icon-smile',
     'icon-smile',
+    'icon-plus-circle',
     'icon-upload-cloud',
   ];
 

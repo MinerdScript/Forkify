@@ -60,7 +60,7 @@ class AddRecipeView extends View {
     <input required name="servings" type="number" />
   </div>
 
-  <div class="upload__column">
+  <div class="upload__column scroll">
     <h3 class="upload__heading">Ingredients</h3>
     <label>Ingredient 1</label>
     <input
@@ -100,7 +100,16 @@ class AddRecipeView extends View {
       placeholder="Format: 'Quantity,Unit,Description'"
     />
   </div>
-
+  <div class="add--ingredients">
+          <span class="add--more--ingredients">
+            Click to add more ingredients servings
+          </span>
+          <button class="btn--tiny btn--increase-ingredients">
+            <svg>
+              <use href="src/img/icons.svg#icon-plus-circle"></use>
+            </svg>
+          </button>
+        </div>
   <button class="btn upload__btn">
     <svg>
       <use href="src/img/icons.svg#icon-upload-cloud"></use>

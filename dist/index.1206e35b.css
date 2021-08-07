@@ -51,6 +51,15 @@ body {
   }
 }
 
+.scroll {
+  display: block;
+  border: 0px solid red;
+  padding: 5px;
+  margin-top: 5px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
 .btn--small, .btn--small:link, .btn--small:visited, .btn {
   background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
   border-radius: 10rem;
@@ -230,6 +239,13 @@ body {
   font-size: 1.8rem;
   line-height: 1.5;
   font-weight: 600;
+}
+
+.add--ingredients {
+  position: absolute;
+  right: 7%;
+  top: 80%;
+  font-size: 1.5rem;
 }
 
 .header {
