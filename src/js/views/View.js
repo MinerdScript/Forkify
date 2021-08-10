@@ -4,10 +4,10 @@ export default class View {
   /**
    * Create a HTML(markup) based on data, and renders it on the "_parentElement"(based on each View).
    * @param {Object | Object[]} data The data to be render (e.g: recipe.)
-   * @param {boolean} [render= true] If false, it will just return the HTML (markup)
+   * @param {boolean} [render = true] If false, it will just return the HTML (markup)
    * @returns {undefined | string}
    */
-  render(data, render = true) {
+  render(data, render = true, mode = 'afterbegin') {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
 

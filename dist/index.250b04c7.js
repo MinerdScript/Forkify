@@ -443,6 +443,8 @@ var _viewsBookmarksView = require('./views/bookmarksView');
 var _viewsBookmarksViewDefault = _parcelHelpers.interopDefault(_viewsBookmarksView);
 var _viewsAddRecipeView = require('./views/addRecipeView');
 var _viewsAddRecipeViewDefault = _parcelHelpers.interopDefault(_viewsAddRecipeView);
+var _viewsAddNewIngredient = require('./views/addNewIngredient');
+var _viewsAddNewIngredientDefault = _parcelHelpers.interopDefault(_viewsAddNewIngredient);
 var _urlImgIconsSvg = require('url:../img/icons.svg');
 var _urlImgIconsSvgDefault = _parcelHelpers.interopDefault(_urlImgIconsSvg);
 require('core-js/stable');
@@ -535,6 +537,9 @@ const controlAddRecipe = async function (newRecipe) {
     _viewsAddRecipeViewDefault.default.renderError(err.message);
   }
 };
+const controlAddIngredient = function () {
+  _viewsAddNewIngredientDefault.default.renderAdd();
+};
 const init = function () {
   console.log(_viewsAddRecipeViewDefault.default);
   _viewsBookmarksViewDefault.default.addHandlerRender(controlBookmarks);
@@ -544,10 +549,11 @@ const init = function () {
   _viewsSearchViewDefault.default.addHandlerSearch(controlSearchResults);
   _viewsPaginationViewDefault.default.addHandlerClick(controlPagination);
   _viewsAddRecipeViewDefault.default.addHandlerUpload(controlAddRecipe);
+  _viewsAddNewIngredientDefault.default.addHandlerAddIngredient(controlAddIngredient);
 };
 init();
 
-},{"./model.js":"1hp6y","./config":"6pr2F","./views/recipeView":"9e6b9","./views/searchView":"3rYQ6","./views/resultsView":"17PYN","./views/paginationView":"5u5Fw","./views/bookmarksView":"2EbNZ","./views/addRecipeView":"4ieaQ","url:../img/icons.svg":"3t5dV","core-js/stable":"1PFvP","regenerator-runtime/runtime":"62Qib","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1hp6y":[function(require,module,exports) {
+},{"./model.js":"1hp6y","./config":"6pr2F","./views/recipeView":"9e6b9","./views/searchView":"3rYQ6","./views/resultsView":"17PYN","./views/paginationView":"5u5Fw","./views/bookmarksView":"2EbNZ","./views/addRecipeView":"4ieaQ","./views/addNewIngredient":"7bIZm","url:../img/icons.svg":"3t5dV","core-js/stable":"1PFvP","regenerator-runtime/runtime":"62Qib","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1hp6y":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "state", function () {
@@ -2102,10 +2108,10 @@ class View {
   /**
   * Create a HTML(markup) based on data, and renders it on the "_parentElement"(based on each View).
   * @param {Object | Object[]} data The data to be render (e.g: recipe.)
-  * @param {boolean} [render= true] If false, it will just return the HTML (markup)
+  * @param {boolean} [render = true] If false, it will just return the HTML (markup)
   * @returns {undefined | string}
   */
-  render(data, render = true) {
+  render(data, render = true, mode = 'afterbegin') {
     if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
     this._data = data;
     const markup = this._generateMarkup();
@@ -2367,6 +2373,7 @@ class AddRecipeView extends _ViewJsDefault.default {
     super();
     this._addHandlerShowWindow();
     this._addHandlerHideWindow();
+    this._ingredients = 6;
   }
   hideWindow() {
     this._overlay.classList.add('hidden');
@@ -2409,7 +2416,7 @@ class AddRecipeView extends _ViewJsDefault.default {
     <input required name="servings" type="number" />
   </div>
 
-  <div class="upload__column scroll">
+  <div class="upload__column scroll ingredients">
     <h3 class="upload__heading">Ingredients</h3>
     <label>Ingredient 1</label>
     <input
@@ -2451,7 +2458,7 @@ class AddRecipeView extends _ViewJsDefault.default {
   </div>
   <div class="add--ingredients">
           <span class="add--more--ingredients">
-            Click to add more ingredients servings
+            Click to add more ingredients
           </span>
           <button class="btn--tiny btn--increase-ingredients">
             <svg>
@@ -2468,6 +2475,40 @@ class AddRecipeView extends _ViewJsDefault.default {
   }
 }
 exports.default = new AddRecipeView();
+
+},{"./View.js":"48jhP","url:../../img/icons.svg":"3t5dV","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"7bIZm":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _ViewJs = require('./View.js');
+var _ViewJsDefault = _parcelHelpers.interopDefault(_ViewJs);
+require('url:../../img/icons.svg');
+class AddNewIngredient extends _ViewJsDefault.default {
+  _parentElement = document.querySelector('.ingredients');
+  _btnAddIngredients = document.querySelector('.btn--increase-ingredients');
+  _ingredients = 6;
+  addHandlerAddIngredient(handler) {
+    this._btnAddIngredients.addEventListener('click', function (e) {
+      console.log('a');
+      e.preventDefault();
+      handler();
+    });
+  }
+  renderAdd(ingredients) {
+    this._ingredients++;
+    const markup = this.render(this._ingredients, false);
+    this._parentElement.insertAdjacentHTML('beforeend', markup);
+  }
+  _generateMarkup() {
+    return `
+  <label>Ingredient ${this._ingredients}</label>
+  <input
+    type="text"
+    name="ingredient-${this._ingredients}"
+    placeholder="Format: 'Quantity,Unit,Description'"
+  />`;
+  }
+}
+exports.default = new AddNewIngredient();
 
 },{"./View.js":"48jhP","url:../../img/icons.svg":"3t5dV","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1PFvP":[function(require,module,exports) {
 require('../modules/es.symbol');

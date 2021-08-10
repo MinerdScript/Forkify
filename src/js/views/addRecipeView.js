@@ -13,6 +13,7 @@ class AddRecipeView extends View {
     super();
     this._addHandlerShowWindow();
     this._addHandlerHideWindow();
+    this._ingredients = 6;
   }
 
   hideWindow() {
@@ -60,7 +61,7 @@ class AddRecipeView extends View {
     <input required name="servings" type="number" />
   </div>
 
-  <div class="upload__column scroll">
+  <div class="upload__column scroll ingredients">
     <h3 class="upload__heading">Ingredients</h3>
     <label>Ingredient 1</label>
     <input
@@ -102,7 +103,7 @@ class AddRecipeView extends View {
   </div>
   <div class="add--ingredients">
           <span class="add--more--ingredients">
-            Click to add more ingredients servings
+            Click to add more ingredients
           </span>
           <button class="btn--tiny btn--increase-ingredients">
             <svg>

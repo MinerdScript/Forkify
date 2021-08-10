@@ -1,0 +1,7 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _ViewJs = require('./View.js');
+var _ViewJsDefault = _parcelHelpers.interopDefault(_ViewJs);
+require('url:../../img/icons.svg');
+class AddNewIngredient extends _ViewJsDefault.default {}
+exports.default = new AddRecipeView();

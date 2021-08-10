@@ -686,6 +686,7 @@ body {
   grid-template-columns: 1fr 2.8fr;
   align-items: center;
   gap: 1.5rem;
+  height: 350px;
 }
 .upload__column label {
   font-size: 1.5rem;

@@ -6,6 +6,7 @@ import resultsView from './views/resultsView';
 import paginationView from './views/paginationView';
 import bookmarksView from './views/bookmarksView';
 import addRecipeView from './views/addRecipeView';
+import addNewIngredient from './views/addNewIngredient';
 
 //Icons from SVG
 import icons from 'url:../img/icons.svg';
@@ -138,6 +139,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const controlAddIngredient = function () {
+  addNewIngredient.renderAdd();
+};
+
 const init = function () {
   console.log(addRecipeView);
   bookmarksView.addHandlerRender(controlBookmarks);
@@ -147,5 +152,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  addNewIngredient.addHandlerAddIngredient(controlAddIngredient);
 };
 init();
