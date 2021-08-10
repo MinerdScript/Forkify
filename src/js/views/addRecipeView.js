@@ -107,13 +107,13 @@ class AddRecipeView extends View {
           </span>
           <button class="btn--tiny btn--increase-ingredients">
             <svg>
-              <use href="src/img/icons.svg#icon-plus-circle"></use>
+              <use href="${icons}#icon-plus-circle"></use>
             </svg>
           </button>
         </div>
   <button class="btn upload__btn">
     <svg>
-      <use href="src/img/icons.svg#icon-upload-cloud"></use>
+      <use href="${icons}#icon-upload-cloud"></use>
     </svg>
     <span>Upload</span>
   </button>`;
