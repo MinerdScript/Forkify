@@ -5,16 +5,17 @@ I only did the javascript part, everything else were made by Jonas Schmedtmann. 
 
 Features made by me in JS while doing the course:
 
-1.Loading recipes from API
-2.Rendering recipes
-3.Searching Recipes
-4.Pagination
-5.Bookmarks system
-6.Servings proportion
-7.Adding recipe
-8.Errors mensages to the UI
-9.Storing bookmarks to the localStorage
+1. Loading recipes from API
+2. Rendering recipes
+3. Searching Recipes
+4. Pagination
+5. Bookmarks system
+6. Servings proportion
+7. Adding recipe
+8. Errors mensages to the UI
+9. Storing bookmarks to the localStorage
 
 Features made by me alone (used JS, scss and html):
 
-1.Adding more than 6 ingredients in add recipe function
+1. Add more than 6 ingredients in add recipe tab
+2. Button to delete all the bookmarks
