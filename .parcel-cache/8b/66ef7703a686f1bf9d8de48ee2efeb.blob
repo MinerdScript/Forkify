@@ -1728,7 +1728,7 @@ class RecipeView extends _ViewJsDefault.default {
 exports.default = new RecipeView();
 
 },{"url:../../img/icons.svg":"3t5dV","fractional":"5jzJt","./View.js":"48jhP","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3t5dV":[function(require,module,exports) {
-module.exports = require('./bundle-url').getBundleURL() + "icons.d4a14980.svg"
+module.exports = require('./bundle-url').getBundleURL() + "icons.HASH_REF_f6727c52d326b6f99dffa0b9d4a14980.svg"
 },{"./bundle-url":"3seVR"}],"3seVR":[function(require,module,exports) {
 "use strict";
 
@@ -14468,4 +14468,4 @@ $({ target: 'URL', proto: true, enumerable: true }, {
 
 },{"../internals/export":"7f5VM"}]},["7BONy","3miIZ"], "3miIZ", "parcelRequirefade")
 
-//# sourceMappingURL=index.250b04c7.js.map
+//# sourceMappingURL=index.HASH_REF_6315ebf922a29661e8263da0250b04c7.js.map
