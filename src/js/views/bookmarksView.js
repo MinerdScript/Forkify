@@ -4,8 +4,7 @@ import icons from 'url:../../img/icons.svg';
 
 class BookmarksView extends View {
   _parentElement = document.querySelector('.bookmarks__list');
-
-  _errorMessage = 'No bookmarks yet, find a nice recipe to bookmar.';
+  _errorMessage = 'No bookmarks yet, find a nice recipe to bookmark.';
   _message = '';
 
   _generateMarkup() {
@@ -36,6 +35,17 @@ class BookmarksView extends View {
             </a>
           </li>
       `;
+  }
+  generateDeleteBookmarks() {
+    const markup = `
+      <div > 
+        <button class="btn-delete-bookmarks preview__link">
+          <img src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/>
+          <h1>Delete all bookmarks</h1>
+        </button>
+      </div>
+    `;
+    this._parentElement.insertAdjacentHTML('beforeend', markup);
   }
 }
 

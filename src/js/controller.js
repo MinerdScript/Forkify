@@ -26,6 +26,7 @@ const fixSvgSprite = function () {
     'icon-edit',
     'icon-bookmark',
     'icon-smile',
+    'icon-alert-circle',
     'icon-smile',
     'icon-plus-circle',
     'icon-upload-cloud',
@@ -97,14 +98,20 @@ const controlServings = function (newServings) {
 
 const controllAddBookmark = function () {
   //Add/remove bookmark
-  if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
-  else model.deleteBookmark(model.state.recipe.id);
+  if (!model.state.recipe.bookmarked) {
+    const deleteAll = model.addBookmark(model.state.recipe);
+  } else {
+    const deleteAll = model.deleteBookmark(model.state.recipe.id);
+  }
 
   //Update recipe view
   recipeView.update(model.state.recipe);
 
   //Render bookmarks
   bookmarksView.render(model.state.bookmarks);
+
+  //Create deleteAll button
+  if ((deleteAll = 1)) bookmarksView.generateDeleteBookmarks();
 };
 
 const controlBookmarks = function () {

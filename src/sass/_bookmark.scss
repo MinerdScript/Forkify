@@ -1,0 +1,20 @@
+.bookmarks__list {
+  max-height: 600px;
+}
+
+.btn-delete-bookmarks {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4rem 4rem;
+  display: flex;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 6px;
+  border: 2px solid #ff0000;
+  transition-duration: 0.8s;
+  cursor: pointer;
+
+  &:hover {
+    color: black;
+  }
+}

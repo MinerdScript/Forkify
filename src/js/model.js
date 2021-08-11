@@ -81,12 +81,18 @@ const persistBookmarks = function () {
 };
 
 export const addBookmark = function (recipe) {
+  //Create deleteAll bookmarks button if it is the first recipe
+  let deleteAll;
+  if (state.bookmarks.length === 0) {
+    deleteAll = 1;
+  }
   //Add bookmark
   state.bookmarks.push(recipe);
 
   //Mark current recipe as bookmarked
   if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
   persistBookmarks();
+  return deleteAll;
 };
 
 export const deleteBookmark = function (id) {

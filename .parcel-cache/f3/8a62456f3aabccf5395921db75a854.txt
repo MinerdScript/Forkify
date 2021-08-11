@@ -1,4 +1,4 @@
-21811
+21820
 160C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-modules-values\node_modules\color-name\index.js131446304070000000 0
 159C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\source-map-support\node_modules\source-map\lib\util.js131509318790000000 0
 161C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\csso\node_modules\css-tree\lib\definition-syntax\walk.js121436361000000000 0
@@ -16,7 +16,7 @@
 118C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\ret\README.md131391076780000000 0
 129C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\emojis-list\package.json121436361000000000 0
 145C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\transformer-postcss\package.json121436361000000000 0
-96C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist132730774669354592 1
+96C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist132731595727851257 1
 115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\css-select132728066634154156 1
 111C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\img\favicon.png132562249780000000 0
 149C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\jsdom\lib\jsdom\living\generated\FormData.js121436361000000000 0
@@ -81,7 +81,7 @@
 168C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-svgo\node_modules\postcss-value-parser\lib\stringify.js121436361000000000 0
 115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\prelude-ls132728066595026032 1
 145C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\abortcontroller-polyfill\src\ponyfill.js121436361000000000 0
-121C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views\bookmarksView.js132728189335713792 0
+121C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views\bookmarksView.js132731546695691818 0
 136C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\purgecss\node_modules\commander132728066627713665 1
 137C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\stylehacks\node_modules\has-flag132728066594555997 1
 166C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\uncss\node_modules\postcss-selector-parser\dist\tokenTypes.js121436361000000000 0
@@ -114,7 +114,7 @@
 144C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\es\typed-array\float32-array.js121436361000000000 0
 145C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\uncss\node_modules\ansi-styles\readme.md131628273600000000 0
 149C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-reduce-transforms\node_modules\chalk132728066613021417 1
-102C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\index.html132730774335197559 0
+102C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\index.html132731500104765452 0
 114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\rgb-regex132728066610541230 1
 166C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-merge-rules\node_modules\postcss-selector-parser\dist132728066646245075 1
 169C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-modules-values\node_modules\source-map\lib\base64-vlq.js131369414910000000 0
@@ -227,14 +227,7 @@
 165C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-unique-selectors\node_modules\postcss\lib\at-rule.js121436361000000000 0
 181C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-normalize-timing-functions\node_modules\color-convert\conversions.js121436361000000000 0
 136C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\types\lib\clone\clone.js121012626000000000 0
-107C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\model.js132727450576978914 0
-117C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\caniuse-lite132728066695238786 1
-110C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\sass\main.scss132562249780000000 0
-126C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\randombytes\README.md121436361000000000 0
-149C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\jsdom\lib\jsdom\living\helpers\shadow-dom.js121436361000000000 0
-166C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\regenerate-unicode-properties\Script_Extensions\Devanagari.js121436361000000000 0
-139C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\packager-html\package.json121436361000000000 0
-167C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-discard-duplicates\node_modules\postcss\docs\syntax.md121436361000000000 0
+107C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\model.js132731534681768799 0
 163C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\transformer-react-refresh-wrap\node_modules\semver132728066622303247 1
 163C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\regenerate-unicode-properties\Binary_Property\Hex_Digit.js121436361000000000 0
 143C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\features\typed-array\values.js121436361000000000 0
@@ -248,6 +241,8 @@
 124C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\pbkdf2\package.json121436361000000000 0
 113C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\ecc-jsbn132728066603800722 1
 121C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\lodash\fp\all.js121436361000000000 0
+163C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-optional-catch-binding\package.json121012626000000000 0
+115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\sass\_bookmark.scss132731594970224938 0
 147C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\resolve\test\resolver\multirepo\lerna.json121436361000000000 0
 128C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\jsdom\lib\jsdom\browser132728066653675652 1
 126C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\detect-libc\README.md131537426190000000 0
@@ -257,8 +252,15 @@
 149C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\stylehacks\node_modules\color-name\README.md131339336430000000 0
 153C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\regenerate-unicode-properties\Script\Bopomofo.js121436361000000000 0
 188C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-modules\node_modules\postcss-modules-extract-imports\src\topologicalSort.js121436361000000000 0
-101C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\README.md132728034463438986 0
+101C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\README.md132731470599280177 0
 159C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-reduce-initial\node_modules\color-name\LICENSE130953959930000000 0
+117C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\caniuse-lite132728066695238786 1
+110C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\sass\main.scss132731474287344238 0
+126C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\randombytes\README.md121436361000000000 0
+149C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\jsdom\lib\jsdom\living\helpers\shadow-dom.js121436361000000000 0
+166C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\regenerate-unicode-properties\Script_Extensions\Devanagari.js121436361000000000 0
+139C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\packager-html\package.json121436361000000000 0
+167C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-discard-duplicates\node_modules\postcss\docs\syntax.md121436361000000000 0
 95C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src132728066094036432 1
 128C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\node-releases\README.md121436361000000000 0
 123C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\has-symbols\.nycrc121436361000000000 0
@@ -344,7 +346,7 @@
 142C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\highlight.js\scss\atom-one-light.scss121436361000000000 0
 132C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\stable\object\is.js121436361000000000 0
 170C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-modules-extract-imports\node_modules\postcss\CHANGELOG.md121436361000000000 0
-100C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\sass132728329592387152 1
+100C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\sass132731474141905958 1
 144C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\miller-rabin\node_modules\bn.js\LICENSE121436361000000000 0
 141C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\modules\es.date.to-string.js121436361000000000 0
 137C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\transformer-posthtml\src132728066612321355 1
@@ -416,7 +418,7 @@
 108C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\config.js132726282290122911 0
 130C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\packager-html\lib132728066594015960 1
 158C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-modules-scope\node_modules\color-name\test.js131446304190000000 0
-112C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\controller.js132730750251354458 0
+112C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\controller.js132731503700473076 0
 150C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\cssnano\node_modules\postcss\lib\container.js121436361000000000 0
 104C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views132730677649164629 1
 140C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-value-parser\lib\index.d.ts121436361000000000 0
@@ -437,18 +439,18 @@
 116C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\fs.realpath132728066603580696 1
 124C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\json5\dist\index.js121436361000000000 0
 143C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\runtime\helpers\objectSpread.js121012626000000000 0
-124C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views\addNewIngredient.js132730752973874533 0
+124C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views\addNewIngredient.js132731533865004880 0
 145C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\json-schema\draft-zyp-json-schema-04.xml131173448000000000 0
 138C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\babel-plugin-polyfill-corejs2\esm132728066612221365 1
 169C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\tag.js121436361000000000 0
-121C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views\addRecipeView.js132730752780141676 0
+121C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views\addRecipeView.js132731463918271889 0
 136C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\entities\lib\maps\entities.json121436361000000000 0
 128C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\uuid\lib\md5-browser.js121436361000000000 0
+122C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views\paginationView.js132727443868860827 0
 137C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\internals\an-instance.js121436361000000000 0
 122C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\once\package.json131176696690000000 0
 133C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\relateurl\lib\util\object.js130631704790000000 0
 117C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\array-unique132728066598366275 1
-122C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\src\js\views\paginationView.js132727443868860827 0
 128C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\es-abstract\2018\Get.js121436361000000000 0
 173C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\regenerate-unicode-properties\Script_Extensions\Old_South_Arabian.js121436361000000000 0
 133C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\stable\math\clz32.js121436361000000000 0
@@ -2617,9 +2619,9 @@
 152C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-ordered-values\node_modules\chalk\types132728066619431908 1
 140C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\features\number\to-fixed.js121436361000000000 0
 124C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\lodash\fp\reduce.js121436361000000000 0
-167C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-reduce-initial\node_modules\postcss\lib\lazy-result.js121436361000000000 0
 136C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\caniuse-lite\data\regions\BA.js121436361000000000 0
 129C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-minify-gradients132728066591725797 1
+167C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-reduce-initial\node_modules\postcss\lib\lazy-result.js121436361000000000 0
 144C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\proposals\string-code-points.js121436361000000000 0
 160C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-normalize-url\node_modules\postcss\lib\input.js121436361000000000 0
 150C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\jsdom\lib\jsdom\living\window\BarProp-impl.js121436361000000000 0
@@ -2726,11 +2728,11 @@
 155C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-colormin\node_modules\ansi-styles\index.js131644568170000000 0
 144C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\icss-utils\node_modules\postcss\LICENSE121436361000000000 0
 114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\relateurl132728066646535093 1
+161C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\source-map-support\node_modules\source-map\lib\base64.js131369414910000000 0
 136C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\core\src\BundleGraph.js121436361000000000 0
 128C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\is-descriptor\README.md131325353560000000 0
 125C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\object-keys\index.js121436361000000000 0
 151C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\source-map-support\node_modules\source-map\lib132728066639994586 1
-161C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\source-map-support\node_modules\source-map\lib\base64.js131369414910000000 0
 121C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\url\package.json130851634080000000 0
 132C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\json-stringify-safe\LICENSE130764733190000000 0
 125C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\tough-cookie\LICENSE121436361000000000 0
@@ -3349,6 +3351,7 @@
 130C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\which-typed-array\.github132728066631603960 1
 124C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\lodash\findIndex.js121436361000000000 0
 145C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\resolve\test\pathfilter\deep_ref\main.js121436361000000000 0
+114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.f02c9509.js132731493884872486 0
 172C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\regenerate-unicode-properties\Binary_Property\Variation_Selector.js121436361000000000 0
 143C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\cssnano-util-same-parent\dist\index.js121436361000000000 0
 135C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\which-typed-array\CHANGELOG.md121436361000000000 0
@@ -3686,7 +3689,7 @@
 176C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-normalize-timing-functions\node_modules\source-map\CHANGELOG.md131369414900000000 0
 130C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\vm-browserify\security.md121436361000000000 0
 118C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\stage132728066702999379 1
-115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.1206e35b.css132730774669134026 0
+115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.1206e35b.css132731594784103243 0
 128C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\svgo\lib\svgo\svg2js.js121436361000000000 0
 135C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\modules\es.unescape.js121436361000000000 0
 132C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\svgo\plugins\removeTitle.js121436361000000000 0
@@ -3793,11 +3796,11 @@
 122C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\react-refresh\cjs132728066627643662 1
 151C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\loader-utils\node_modules\json5\lib\require.js131658179830000000 0
 152C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\regenerate-unicode-properties\Script\Myanmar.js121436361000000000 0
-127C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\util.promisify\LICENSE121436361000000000 0
 151C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-calc\node_modules\postcss\CHANGELOG.md121436361000000000 0
 150C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\core\lib\config\files\index-browser.js121012626000000000 0
 151C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\unicode-match-property-ecmascript\package.json131728506360000000 0
 125C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\lodash.clone\LICENSE131155832410000000 0
+127C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\util.promisify\LICENSE121436361000000000 0
 146C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\helper-module-imports\lib\index.js121012626000000000 0
 125C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\type-check\README.md130958412340000000 0
 158C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\jsdom\lib\jsdom\living\nodes\HTMLDListElement-impl.js121436361000000000 0
@@ -4423,7 +4426,7 @@
 123C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\cli-cursor\license121436361000000000 0
 172C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\guards.js121436361000000000 0
 161C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-reduce-initial\node_modules\ansi-styles\index.js131644568170000000 0
-114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\logo.09084f39.png132730767883891948 0
+114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\logo.09084f39.png132731595437813310 0
 173C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-svgo\node_modules\chalk\node_modules\supports-color\index.js131792129460000000 0
 148C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-merge-longhand\dist\lib\getDecls.js121436361000000000 0
 175C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\namespace.js121436361000000000 0
@@ -6977,7 +6980,7 @@
 128C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\iconv-lite\Changelog.md131794417360000000 0
 162C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-reduce-transforms\node_modules\chalk\node_modules132728066509508556 1
 119C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\lodash\take.js121436361000000000 0
-114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\logo.5d271741.png132730774668012589 0
+114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\logo.5d271741.png132731594783882839 0
 141C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\request-promise-core\lib\plumbing.js121436361000000000 0
 177C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-normalize-display-values\node_modules\color-convert\CHANGELOG.md121436361000000000 0
 151C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\request-promise-core\configure\request-next.js121436361000000000 0
@@ -8025,8 +8028,8 @@
 153C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\purgecss\node_modules\postcss\lib\declaration.js121436361000000000 0
 166C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\csso\node_modules\css-tree\lib\syntax\node\DeclarationList.js121436361000000000 0
 128C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\is-binary-path\index.js121436361000000000 0
-141C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\object-inspect\test\indent-option.js121436361000000000 0
 147C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\purgecss\node_modules\postcss\lib\input.js121436361000000000 0
+141C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\object-inspect\test\indent-option.js121436361000000000 0
 126C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\lodash\_baseRepeat.js121436361000000000 0
 137C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\modules\es.math.expm1.js121436361000000000 0
 155C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-normalize-whitespace\node_modules\has-flag132728066595246046 1
@@ -11660,6 +11663,7 @@
 162C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-merge-rules\node_modules\ansi-styles\package.json131644571980000000 0
 143C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\helper-module-imports\README.md121012626000000000 0
 159C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-merge-rules\node_modules\ansi-styles\readme.md131628273600000000 0
+114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.3b9a1f67.js132731595727671279 0
 169C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-logical-assignment-operators\lib\index.js121012626000000000 0
 153C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\es\object\get-own-property-descriptor.js121436361000000000 0
 156C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\postcss-merge-rules\dist\lib\ensureCompatibility.js121436361000000000 0
@@ -15546,6 +15550,7 @@
 142C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\core-js\modules\esnext.map.emplace.js121436361000000000 0
 139C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\highlight.js\scss\kimbie.dark.scss121436361000000000 0
 134C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\highlight.js\scss\lioshi.scss121436361000000000 0
+118C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.f02c9509.js.map132731493885132512 0
 137C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\highlight.js\scss\mono-blue.scss121436361000000000 0
 137C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\highlight.js\scss\night-owl.scss121436361000000000 0
 132C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\highlight.js\scss\nnfx.scss121436361000000000 0
@@ -17604,7 +17609,7 @@
 117C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\css-tree\lib132728066671246996 1
 123C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\css-tree\README.md121436361000000000 0
 137C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\css-tree\node_modules\source-map132728066643904896 1
-115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\icons.c781f215.svg132730767883831913 0
+115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\icons.c781f215.svg132731595437773335 0
 145C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\css-tree\node_modules\source-map\LICENSE131369414900000000 0
 150C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\css-tree\node_modules\source-map\package.json131511697190000000 0
 151C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\transformer-js\src\visitors\process.js121436361000000000 0
@@ -19211,6 +19216,7 @@
 133C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\traverse\lib\index.js121012626000000000 0
 136C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\caniuse-lite\data\regions\MX.js121436361000000000 0
 136C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\caniuse-lite\data\regions\MY.js121436361000000000 0
+115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.938abf13.css132731493884802475 0
 136C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\caniuse-lite\data\regions\NA.js121436361000000000 0
 155C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\runtime\helpers\esm\classPrivateFieldGet.js121012626000000000 0
 115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\base-x\src132728066609301147 1
@@ -20965,7 +20971,7 @@
 141C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\babylon-walk\lib\traverse.js121436361000000000 0
 138C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\babylon-walk\lib\types.js121436361000000000 0
 142C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\babel-preset-env\package.json121436361000000000 0
-115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\icons.d4a14980.svg132730774668604014 0
+115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\icons.d4a14980.svg132731594783732836 0
 133C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\babel-preset-env\src132728066604930806 1
 142C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\babel-preset-env\src\index.js121436361000000000 0
 147C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@parcel\babel-preset-env\node_modules\.bin132728066704099467 1
@@ -21523,7 +21529,6 @@
 153C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-optional-chaining\LICENSE121012626000000000 0
 158C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-optional-chaining\lib\index.js121012626000000000 0
 158C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-optional-catch-binding\LICENSE121012626000000000 0
-163C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-optional-catch-binding\package.json121012626000000000 0
 160C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-optional-catch-binding\README.md121012626000000000 0
 150C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-object-rest-spread\lib132728066598776327 1
 156C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\@babel\plugin-proposal-object-rest-spread\README.md121012626000000000 0
@@ -21799,14 +21804,18 @@
 118C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\.bin\uuid.ps1132728066704589497 0
 119C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\.bin\which.cmd132728066704589497 0
 119C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\node_modules\.bin\which.ps1132728066704599504 0
-117C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\favicon.80934ffe.png132730774668012589 0
-117C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\favicon.f1877f87.png132730767883821945 0
-115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\icons.c4b52749.svg132730774668012589 0
-119C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.1206e35b.css.map132730774669224014 0
+117C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\favicon.80934ffe.png132731594783852828 0
+117C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\favicon.f1877f87.png132731595437763315 0
+115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\icons.c4b52749.svg132731594783872846 0
+119C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.1206e35b.css.map132731594784283276 0
 114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.1eec005a.js132730768184668409 0
 118C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.1eec005a.js.map132730768184908417 0
-114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.250b04c7.js132730774669234026 0
-118C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.250b04c7.js.map132730774669324645 0
+114C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.250b04c7.js132731594784293241 0
+118C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.250b04c7.js.map132731594784383278 0
+118C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.3b9a1f67.js.map132731595727831232 0
+119C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.938abf13.css.map132731493884962508 0
 115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.9e81ed48.css132730768184628434 0
 119C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.9e81ed48.css.map132730768184798435 0
-107C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.html132730774669154031 0
+115C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.bf8baefd.css132731595727611241 0
+119C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.bf8baefd.css.map132731595727721254 0
+107C:\Users\mnrod\OneDrive\Ambiente de Trabalho\trabalhos\Curso java script\18-forkify\Forkify\dist\index.html132731595727601221 0

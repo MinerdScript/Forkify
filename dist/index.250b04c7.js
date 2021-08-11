@@ -455,7 +455,7 @@ require('regenerator-runtime/runtime');
 // }
 // Fix SVG parcel problem
 const fixSvgSprite = function () {
-  const arrayAttributes = ['icon-search', 'icon-edit', 'icon-bookmark', 'icon-smile', 'icon-smile', 'icon-plus-circle', 'icon-upload-cloud'];
+  const arrayAttributes = ['icon-search', 'icon-edit', 'icon-bookmark', 'icon-smile', 'icon-alert-circle', 'icon-smile', 'icon-plus-circle', 'icon-upload-cloud'];
   const svgSprites = document.querySelectorAll('use');
   let i = 0;
   svgSprites.forEach(spr => {
@@ -507,11 +507,17 @@ const controlServings = function (newServings) {
 };
 const controllAddBookmark = function () {
   // Add/remove bookmark
-  if (!_modelJs.state.recipe.bookmarked) _modelJs.addBookmark(_modelJs.state.recipe); else _modelJs.deleteBookmark(_modelJs.state.recipe.id);
+  if (!_modelJs.state.recipe.bookmarked) {
+    const deleteAll = _modelJs.addBookmark(_modelJs.state.recipe);
+  } else {
+    const deleteAll = _modelJs.deleteBookmark(_modelJs.state.recipe.id);
+  }
   // Update recipe view
   _viewsRecipeViewDefault.default.update(_modelJs.state.recipe);
   // Render bookmarks
   _viewsBookmarksViewDefault.default.render(_modelJs.state.bookmarks);
+  // Create deleteAll button
+  if (deleteAll = 1) _viewsBookmarksViewDefault.default.generateDeleteBookmarks();
 };
 const controlBookmarks = function () {
   _viewsBookmarksViewDefault.default.render(_modelJs.state.bookmarks);
@@ -653,11 +659,17 @@ const persistBookmarks = function () {
   localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
 };
 const addBookmark = function (recipe) {
+  // Create deleteAll bookmarks button if it is the first recipe
+  let deleteAll;
+  if (state.bookmarks.length === 0) {
+    deleteAll = 1;
+  }
   // Add bookmark
   state.bookmarks.push(recipe);
   // Mark current recipe as bookmarked
   if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
   persistBookmarks();
+  return deleteAll;
 };
 const deleteBookmark = function (id) {
   const index = state.bookmarks.findIndex(el => el.id === id);
@@ -2328,7 +2340,7 @@ var _previewViewDefault = _parcelHelpers.interopDefault(_previewView);
 require('url:../../img/icons.svg');
 class BookmarksView extends _ViewJsDefault.default {
   _parentElement = document.querySelector('.bookmarks__list');
-  _errorMessage = 'No bookmarks yet, find a nice recipe to bookmar.';
+  _errorMessage = 'No bookmarks yet, find a nice recipe to bookmark.';
   _message = '';
   _generateMarkup() {
     return this._data.map(bookmark => _previewViewDefault.default.render(bookmark, false)).join('');
@@ -2351,6 +2363,17 @@ class BookmarksView extends _ViewJsDefault.default {
             </a>
           </li>
       `;
+  }
+  generateDeleteBookmarks() {
+    const markup = `
+      <div > 
+        <button class="btn-delete-bookmarks preview__link">
+          <img src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/>
+          <h1>Delete all bookmarks</h1>
+        </button>
+      </div>
+    `;
+    this._parentElement.insertAdjacentHTML('beforeend', markup);
   }
 }
 exports.default = new BookmarksView();
@@ -2482,7 +2505,6 @@ var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 var _ViewJs = require('./View.js');
 var _ViewJsDefault = _parcelHelpers.interopDefault(_ViewJs);
-require('url:../../img/icons.svg');
 class AddNewIngredient extends _ViewJsDefault.default {
   constructor() {
     super();
@@ -2519,7 +2541,7 @@ class AddNewIngredient extends _ViewJsDefault.default {
 }
 exports.default = new AddNewIngredient();
 
-},{"./View.js":"48jhP","url:../../img/icons.svg":"3t5dV","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1PFvP":[function(require,module,exports) {
+},{"./View.js":"48jhP","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1PFvP":[function(require,module,exports) {
 require('../modules/es.symbol');
 require('../modules/es.symbol.description');
 require('../modules/es.symbol.async-iterator');
