@@ -2,13 +2,17 @@ import View from './View.js';
 import icons from 'url:../../img/icons.svg';
 
 class AddNewIngredient extends View {
-  _parentElement = document.querySelector('.ingredients');
-  _btnAddIngredients = document.querySelector('.btn--increase-ingredients');
-  _ingredients = 6;
+  constructor() {
+    super();
+    this._parentElement = document.querySelector('.ingredients');
+    this._ingredients = 6;
+    this._btnAddIngredients = document.querySelector(
+      '.btn--increase-ingredients'
+    );
+  }
 
   addHandlerAddIngredient(handler) {
     this._btnAddIngredients.addEventListener('click', function (e) {
-      console.log('a');
       e.preventDefault();
       handler();
     });
@@ -18,6 +22,15 @@ class AddNewIngredient extends View {
     this._ingredients++;
     const markup = this.render(this._ingredients, false);
     this._parentElement.insertAdjacentHTML('beforeend', markup);
+  }
+
+  resetVariables(handler) {
+    this._parentElement = document.querySelector('.ingredients');
+    this._ingredients = 6;
+    this._btnAddIngredients = document.querySelector(
+      '.btn--increase-ingredients'
+    );
+    this.addHandlerAddIngredient(handler);
   }
 
   _generateMarkup() {

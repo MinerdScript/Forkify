@@ -1,0 +1,32 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _ViewJs = require('./View.js');
+var _ViewJsDefault = _parcelHelpers.interopDefault(_ViewJs);
+require('url:../../img/icons.svg');
+class AddNewIngredient extends _ViewJsDefault.default {
+  _parentElement = document.querySelector('.ingredients');
+  _btnAddIngredients = document.querySelector('.btn--increase-ingredients');
+  _ingredients = 6;
+  addHandlerAddIngredient(handler) {
+    console.log('AIU', this._btnAddIngredients);
+    this._btnAddIngredients.addEventListener('click', function (e) {
+      e.preventDefault();
+      handler();
+    });
+  }
+  renderAdd(ingredients) {
+    this._ingredients++;
+    const markup = this.render(this._ingredients, false);
+    this._parentElement.insertAdjacentHTML('beforeend', markup);
+  }
+  _generateMarkup() {
+    return `
+  <label>Ingredient ${this._ingredients}</label>
+  <input
+    type="text"
+    name="ingredient-${this._ingredients}"
+    placeholder="Format: 'Quantity,Unit,Description'"
+  />`;
+  }
+}
+exports.default = new AddNewIngredient();

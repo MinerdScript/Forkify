@@ -528,20 +528,19 @@ const controlAddRecipe = async function (newRecipe) {
     _viewsBookmarksViewDefault.default.render(_modelJs.state.bookmarks);
     // Change ID in the url
     window.history.pushState(null, '', `#${_modelJs.state.recipe.id}`);
-    // Close form window
-    setTimeout(function () {
-      _viewsAddRecipeViewDefault.default.hideWindow();
-      _viewsAddRecipeViewDefault.default.render(1);
-    }, _config.MODAL_CLOSE_SEC * 1000);
   } catch (err) {
     _viewsAddRecipeViewDefault.default.renderError(err.message);
   }
+  setTimeout(function () {
+    _viewsAddRecipeViewDefault.default.hideWindow();
+    _viewsAddRecipeViewDefault.default.render(1);
+    _viewsAddNewIngredientDefault.default.resetVariables(controlAddIngredient);
+  }, _config.MODAL_CLOSE_SEC * 1000);
 };
 const controlAddIngredient = function () {
   _viewsAddNewIngredientDefault.default.renderAdd();
 };
 const init = function () {
-  console.log(_viewsAddRecipeViewDefault.default);
   _viewsBookmarksViewDefault.default.addHandlerRender(controlBookmarks);
   _viewsRecipeViewDefault.default.addHandlerRender(controlRecipes);
   _viewsRecipeViewDefault.default.addHandlerUpdateServings(controlServings);
@@ -2361,7 +2360,8 @@ var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 var _ViewJs = require('./View.js');
 var _ViewJsDefault = _parcelHelpers.interopDefault(_ViewJs);
-require('url:../../img/icons.svg');
+var _urlImgIconsSvg = require('url:../../img/icons.svg');
+var _urlImgIconsSvgDefault = _parcelHelpers.interopDefault(_urlImgIconsSvg);
 class AddRecipeView extends _ViewJsDefault.default {
   _parentElement = document.querySelector('.upload');
   _message = 'Recipe was successfully uploaded.';
@@ -2400,78 +2400,79 @@ class AddRecipeView extends _ViewJsDefault.default {
   }
   _generateMarkup() {
     return `
-    <div class="upload__column">
-    <h3 class="upload__heading">Recipe data</h3>
-    <label>Title</label>
-    <input required name="title" type="text" />
-    <label>URL</label>
-    <input required name="sourceUrl" type="text" />
-    <label>Image URL</label>
-    <input required name="image" type="text" />
-    <label>Publisher</label>
-    <input required name="publisher" type="text" />
-    <label>Prep time</label>
-    <input required name="cookingTime" type="number" />
-    <label>Servings</label>
-    <input required name="servings" type="number" />
-  </div>
+        <div class="upload__column">
+          <h3 class="upload__heading">Recipe data</h3>
+          <label>Title</label>
+          <input required name="title" type="text" />
+          <label>URL</label>
+          <input required name="sourceUrl" type="text" />
+          <label>Image URL</label>
+          <input required name="image" type="text" />
+          <label>Publisher</label>
+          <input required name="publisher" type="text" />
+          <label>Prep time</label>
+          <input required name="cookingTime" type="number" />
+          <label>Servings</label>
+          <input required name="servings" type="number" />
+        </div>
 
-  <div class="upload__column scroll ingredients">
-    <h3 class="upload__heading">Ingredients</h3>
-    <label>Ingredient 1</label>
-    <input
-      type="text"
-      required
-      name="ingredient-1"
-      placeholder="Format: 'Quantity,Unit,Description'"
-    />
-    <label>Ingredient 2</label>
-    <input
-      type="text"
-      name="ingredient-2"
-      placeholder="Format: 'Quantity,Unit,Description'"
-    />
-    <label>Ingredient 3</label>
-    <input
-      type="text"
-      name="ingredient-3"
-      placeholder="Format: 'Quantity,Unit,Description'"
-    />
-    <label>Ingredient 4</label>
-    <input
-      type="text"
-      name="ingredient-4"
-      placeholder="Format: 'Quantity,Unit,Description'"
-    />
-    <label>Ingredient 5</label>
-    <input
-      type="text"
-      name="ingredient-5"
-      placeholder="Format: 'Quantity,Unit,Description'"
-    />
-    <label>Ingredient 6</label>
-    <input
-      type="text"
-      name="ingredient-6"
-      placeholder="Format: 'Quantity,Unit,Description'"
-    />
-  </div>
-  <div class="add--ingredients">
+        <div class="upload__column scroll ingredients">
+          <h3 class="upload__heading">Ingredients</h3>
+          <label>Ingredient 1</label>
+          <input
+            type="text"
+            required
+            name="ingredient-1"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+          <label>Ingredient 2</label>
+          <input
+            type="text"
+            name="ingredient-2"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+          <label>Ingredient 3</label>
+          <input
+            type="text"
+            name="ingredient-3"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+          <label>Ingredient 4</label>
+          <input
+            type="text"
+            name="ingredient-4"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+          <label>Ingredient 5</label>
+          <input
+            type="text"
+            name="ingredient-5"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+          <label>Ingredient 6</label>
+          <input
+            type="text"
+            name="ingredient-6"
+            placeholder="Format: 'Quantity,Unit,Description'"
+          />
+        </div>
+
+        <div class="add--ingredients">
           <span class="add--more--ingredients">
             Click to add more ingredients
           </span>
           <button class="btn--tiny btn--increase-ingredients">
             <svg>
-              <use href="src/img/icons.svg#icon-plus-circle"></use>
+              <use href="${_urlImgIconsSvgDefault.default}#icon-plus-circle"></use>
             </svg>
           </button>
         </div>
-  <button class="btn upload__btn">
-    <svg>
-      <use href="src/img/icons.svg#icon-upload-cloud"></use>
-    </svg>
-    <span>Upload</span>
-  </button>`;
+        <button class="btn upload__btn">
+          <svg>
+            <use href="${_urlImgIconsSvgDefault.default}#icon-upload-cloud"></use>
+          </svg>
+          <span>Upload</span>
+        </button>`;
   }
 }
 exports.default = new AddRecipeView();
@@ -2483,12 +2484,14 @@ var _ViewJs = require('./View.js');
 var _ViewJsDefault = _parcelHelpers.interopDefault(_ViewJs);
 require('url:../../img/icons.svg');
 class AddNewIngredient extends _ViewJsDefault.default {
-  _parentElement = document.querySelector('.ingredients');
-  _btnAddIngredients = document.querySelector('.btn--increase-ingredients');
-  _ingredients = 6;
+  constructor() {
+    super();
+    this._parentElement = document.querySelector('.ingredients');
+    this._ingredients = 6;
+    this._btnAddIngredients = document.querySelector('.btn--increase-ingredients');
+  }
   addHandlerAddIngredient(handler) {
     this._btnAddIngredients.addEventListener('click', function (e) {
-      console.log('a');
       e.preventDefault();
       handler();
     });
@@ -2497,6 +2500,12 @@ class AddNewIngredient extends _ViewJsDefault.default {
     this._ingredients++;
     const markup = this.render(this._ingredients, false);
     this._parentElement.insertAdjacentHTML('beforeend', markup);
+  }
+  resetVariables(handler) {
+    this._parentElement = document.querySelector('.ingredients');
+    this._ingredients = 6;
+    this._btnAddIngredients = document.querySelector('.btn--increase-ingredients');
+    this.addHandlerAddIngredient(handler);
   }
   _generateMarkup() {
     return `

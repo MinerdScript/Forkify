@@ -130,13 +130,14 @@ const controlAddRecipe = async function (newRecipe) {
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
 
     //Close form window
-    setTimeout(function () {
-      addRecipeView.hideWindow();
-      addRecipeView.render(1);
-    }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
     addRecipeView.renderError(err.message);
   }
+  setTimeout(function () {
+    addRecipeView.hideWindow();
+    addRecipeView.render(1);
+    addNewIngredient.resetVariables(controlAddIngredient);
+  }, MODAL_CLOSE_SEC * 1000);
 };
 
 const controlAddIngredient = function () {
@@ -144,7 +145,6 @@ const controlAddIngredient = function () {
 };
 
 const init = function () {
-  console.log(addRecipeView);
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
