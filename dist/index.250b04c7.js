@@ -506,21 +506,33 @@ const controlServings = function (newServings) {
   _viewsRecipeViewDefault.default.update(_modelJs.state.recipe);
 };
 const controllAddBookmark = function () {
+  let deleteAll;
   // Add/remove bookmark
   if (!_modelJs.state.recipe.bookmarked) {
-    const deleteAll = _modelJs.addBookmark(_modelJs.state.recipe);
+    _modelJs.addBookmark(_modelJs.state.recipe);
+    deleteAll = 1;
   } else {
-    const deleteAll = _modelJs.deleteBookmark(_modelJs.state.recipe.id);
+    deleteAll = _modelJs.deleteBookmark(_modelJs.state.recipe.id);
   }
   // Update recipe view
   _viewsRecipeViewDefault.default.update(_modelJs.state.recipe);
   // Render bookmarks
   _viewsBookmarksViewDefault.default.render(_modelJs.state.bookmarks);
-  // Create deleteAll button
-  if (deleteAll = 1) _viewsBookmarksViewDefault.default.generateDeleteBookmarks();
+  // Create deleteAllBookmarks button
+  if (deleteAll === 1) {
+    _viewsBookmarksViewDefault.default.generateDeleteBookmarks();
+    // Add the event to the button
+    _viewsBookmarksViewDefault.default.addHandlerClickDelBookmakrs(controlDelBookmarks);
+  }
+  // Remove deleteAllBookmarks button
+  if (deleteAll === 2) _viewsBookmarksViewDefault.default.removeDelBookmarksButton();
 };
 const controlBookmarks = function () {
   _viewsBookmarksViewDefault.default.render(_modelJs.state.bookmarks);
+  if (_modelJs.state.bookmarks.length) {
+    _viewsBookmarksViewDefault.default.generateDeleteBookmarks();
+    _viewsBookmarksViewDefault.default.addHandlerClickDelBookmakrs(controlDelBookmarks);
+  }
 };
 const controlAddRecipe = async function (newRecipe) {
   try {
@@ -545,6 +557,12 @@ const controlAddRecipe = async function (newRecipe) {
 };
 const controlAddIngredient = function () {
   _viewsAddNewIngredientDefault.default.renderAdd();
+};
+const controlDelBookmarks = function () {
+  _modelJs.deleteAllBookmarks();
+  _viewsBookmarksViewDefault.default.render(_modelJs.state.bookmarks);
+  // Updates in case the current recipe was bookmarked
+  _viewsRecipeViewDefault.default.update(_modelJs.state.recipe);
 };
 const init = function () {
   _viewsBookmarksViewDefault.default.addHandlerRender(controlBookmarks);
@@ -581,6 +599,9 @@ _parcelHelpers.export(exports, "addBookmark", function () {
 });
 _parcelHelpers.export(exports, "deleteBookmark", function () {
   return deleteBookmark;
+});
+_parcelHelpers.export(exports, "deleteAllBookmarks", function () {
+  return deleteAllBookmarks;
 });
 _parcelHelpers.export(exports, "uploadRecipes", function () {
   return uploadRecipes;
@@ -659,24 +680,37 @@ const persistBookmarks = function () {
   localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
 };
 const addBookmark = function (recipe) {
-  // Create deleteAll bookmarks button if it is the first recipe
-  let deleteAll;
-  if (state.bookmarks.length === 0) {
-    deleteAll = 1;
-  }
   // Add bookmark
   state.bookmarks.push(recipe);
   // Mark current recipe as bookmarked
   if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
   persistBookmarks();
-  return deleteAll;
 };
 const deleteBookmark = function (id) {
+  // if it is 2, it will remove the deleteAllBookmarks button, if it is 1, it will render it
+  let deleteAll;
   const index = state.bookmarks.findIndex(el => el.id === id);
   state.bookmarks.splice(index, 1);
   // Mark current recipe as NOT bookmarked
   if (id === state.recipe.id) state.recipe.bookmarked = false;
   persistBookmarks();
+  if (state.bookmarks.length === 0) {
+    deleteAll = 2;
+  } else {
+    deleteAll = 1;
+  }
+  return deleteAll;
+};
+const deleteAllBookmarks = function () {
+  let i = state.bookmarks.length;
+  while (i) {
+    state.bookmarks.pop();
+    i--;
+  }
+  clearBookmarks();
+  if (state.recipe.bookmarked) {
+    state.recipe.bookmarked = false;
+  }
 };
 const init = function () {
   const storage = localStorage.getItem('bookmarks');
@@ -2348,6 +2382,13 @@ class BookmarksView extends _ViewJsDefault.default {
   addHandlerRender(handler) {
     window.addEventListener('load', handler);
   }
+  addHandlerClickDelBookmakrs(handler) {
+    this._btnDeleteBookmarks = document.querySelector('.btn-delete-bookmarks');
+    if (this._btnDeleteBookmarks) this._btnDeleteBookmarks.addEventListener('click', function (e) {
+      e.preventDefault();
+      handler();
+    });
+  }
   _generateMarkupPreview(result) {
     const id = window.location.hash.slice(1);
     return `
@@ -2367,13 +2408,17 @@ class BookmarksView extends _ViewJsDefault.default {
   generateDeleteBookmarks() {
     const markup = `
       <div > 
-        <button class="btn-delete-bookmarks preview__link">
+        <button class="btn-delete-bookmarks">
           <img src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/>
           <h1>Delete all bookmarks</h1>
         </button>
       </div>
     `;
     this._parentElement.insertAdjacentHTML('beforeend', markup);
+  }
+  removeDelBookmarksButton() {
+    this._clear();
+    this.renderError();
   }
 }
 exports.default = new BookmarksView();

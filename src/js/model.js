@@ -81,27 +81,41 @@ const persistBookmarks = function () {
 };
 
 export const addBookmark = function (recipe) {
-  //Create deleteAll bookmarks button if it is the first recipe
-  let deleteAll;
-  if (state.bookmarks.length === 0) {
-    deleteAll = 1;
-  }
   //Add bookmark
   state.bookmarks.push(recipe);
 
   //Mark current recipe as bookmarked
   if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
   persistBookmarks();
-  return deleteAll;
 };
 
 export const deleteBookmark = function (id) {
+  //if it is 2, it will remove the deleteAllBookmarks button, if it is 1, it will render it
+  let deleteAll;
   const index = state.bookmarks.findIndex(el => el.id === id);
   state.bookmarks.splice(index, 1);
 
   //Mark current recipe as NOT bookmarked
   if (id === state.recipe.id) state.recipe.bookmarked = false;
   persistBookmarks();
+  if (state.bookmarks.length === 0) {
+    deleteAll = 2;
+  } else {
+    deleteAll = 1;
+  }
+  return deleteAll; //it will be saved on "deleteAll" at controller.js, to choose the mode that will remove the deleteAllBookmarks button (if it is === 2)
+};
+
+export const deleteAllBookmarks = function () {
+  let i = state.bookmarks.length;
+  while (i) {
+    state.bookmarks.pop();
+    i--;
+  }
+  clearBookmarks();
+  if (state.recipe.bookmarked) {
+    state.recipe.bookmarked = false;
+  }
 };
 
 const init = function () {

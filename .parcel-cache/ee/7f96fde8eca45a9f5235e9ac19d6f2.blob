@@ -77,8 +77,7 @@ body {
   cursor: pointer;
 }
 .btn-delete-bookmarks:hover {
-  background-color: #fd1f1f;
-  color: white;
+  color: black;
 }
 
 .btn--small, .btn--small:link, .btn--small:visited, .btn {

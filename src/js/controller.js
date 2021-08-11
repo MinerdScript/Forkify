@@ -97,11 +97,14 @@ const controlServings = function (newServings) {
 };
 
 const controllAddBookmark = function () {
+  let deleteAll;
+
   //Add/remove bookmark
   if (!model.state.recipe.bookmarked) {
-    const deleteAll = model.addBookmark(model.state.recipe);
+    model.addBookmark(model.state.recipe);
+    deleteAll = 1;
   } else {
-    const deleteAll = model.deleteBookmark(model.state.recipe.id);
+    deleteAll = model.deleteBookmark(model.state.recipe.id);
   }
 
   //Update recipe view
@@ -110,12 +113,23 @@ const controllAddBookmark = function () {
   //Render bookmarks
   bookmarksView.render(model.state.bookmarks);
 
-  //Create deleteAll button
-  if ((deleteAll = 1)) bookmarksView.generateDeleteBookmarks();
+  //Create deleteAllBookmarks button
+  if (deleteAll === 1) {
+    bookmarksView.generateDeleteBookmarks();
+    //Add the event to the button
+    bookmarksView.addHandlerClickDelBookmakrs(controlDelBookmarks);
+  }
+
+  //Remove deleteAllBookmarks button
+  if (deleteAll === 2) bookmarksView.removeDelBookmarksButton();
 };
 
 const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
+  if (model.state.bookmarks.length) {
+    bookmarksView.generateDeleteBookmarks();
+    bookmarksView.addHandlerClickDelBookmakrs(controlDelBookmarks);
+  }
 };
 
 const controlAddRecipe = async function (newRecipe) {
@@ -149,6 +163,15 @@ const controlAddRecipe = async function (newRecipe) {
 
 const controlAddIngredient = function () {
   addNewIngredient.renderAdd();
+};
+
+const controlDelBookmarks = function () {
+  model.deleteAllBookmarks();
+
+  bookmarksView.render(model.state.bookmarks);
+
+  //Updates in case the current recipe was bookmarked
+  recipeView.update(model.state.recipe);
 };
 
 const init = function () {

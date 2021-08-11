@@ -17,6 +17,15 @@ class BookmarksView extends View {
     window.addEventListener('load', handler);
   }
 
+  addHandlerClickDelBookmakrs(handler) {
+    this._btnDeleteBookmarks = document.querySelector('.btn-delete-bookmarks');
+    if (this._btnDeleteBookmarks)
+      this._btnDeleteBookmarks.addEventListener('click', function (e) {
+        e.preventDefault();
+        handler();
+      });
+  }
+
   _generateMarkupPreview(result) {
     const id = window.location.hash.slice(1);
 
@@ -39,13 +48,18 @@ class BookmarksView extends View {
   generateDeleteBookmarks() {
     const markup = `
       <div > 
-        <button class="btn-delete-bookmarks preview__link">
+        <button class="btn-delete-bookmarks">
           <img src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"/>
           <h1>Delete all bookmarks</h1>
         </button>
       </div>
     `;
     this._parentElement.insertAdjacentHTML('beforeend', markup);
+  }
+
+  removeDelBookmarksButton() {
+    this._clear();
+    this.renderError();
   }
 }
 
