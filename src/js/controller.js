@@ -27,7 +27,6 @@ const fixSvgSprite = function () {
     'icon-bookmark',
     'icon-smile',
     'icon-alert-circle',
-    'icon-smile',
     'icon-plus-circle',
     'icon-upload-cloud',
   ];
@@ -134,6 +133,21 @@ const controlBookmarks = function () {
 
 const controlAddRecipe = async function (newRecipe) {
   try {
+    //If some ingredient is on wrong format
+    let wrongIngredient = [];
+    for (const [key, value] of Object.entries(newRecipe)) {
+      if (key.startsWith('ingredient') && value) {
+        const string = value.split(',');
+        console.log(string);
+        if (string.length !== 3 || string[2] === '')
+          wrongIngredient.push(key.slice(-1));
+      }
+    }
+    if (wrongIngredient.length !== 0) {
+      addRecipeView.ingBadFormat(wrongIngredient);
+      return;
+    }
+
     addRecipeView.renderSpinner();
 
     await model.uploadRecipes(newRecipe);

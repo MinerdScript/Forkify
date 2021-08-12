@@ -20,3 +20,4 @@ Features made by me alone (used JS, scss and html):
 1. Add more than 6 ingredients in add recipe tab
 2. Button to delete all the bookmarks
 3. Number of pages appearing on pagination
+4. Ingredient validation

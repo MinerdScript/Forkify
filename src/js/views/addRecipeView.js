@@ -8,6 +8,7 @@ class AddRecipeView extends View {
   _overlay = document.querySelector('.overlay');
   _btnOpen = document.querySelector('.nav__btn--add-recipe');
   _btnClose = document.querySelector('.btn--close-modal');
+  _ingredientsColumn = document.querySelector('.ingredients');
 
   constructor() {
     super();
@@ -34,12 +35,45 @@ class AddRecipeView extends View {
     this._overlay.addEventListener('click', this._toggleWindow.bind(this));
   }
 
+  _formEvent() {}
+
   addHandlerUpload(handler) {
     this._parentElement.addEventListener('submit', function (e) {
       e.preventDefault();
       const dataArr = [...new FormData(this)];
       const data = Object.fromEntries(dataArr);
+
+      //Removes the red borders
+      let i = 1;
+      while (document.getElementsByName(`ingredient-${i}`)[0]) {
+        document.getElementsByName(`ingredient-${i}`)[0].style.border =
+          '1px solid #ddd';
+        i++;
+      }
+
       handler(data);
+    });
+  }
+
+  ingBadFormat(wrongIngredients) {
+    const string = wrongIngredients.join(' ');
+    string.trim();
+    if (document.querySelector('.wrong-format-msg'))
+      document.querySelector(
+        '.wrong-format-msg'
+      ).innerHTML = `The ingredient(s) ${string} is/are in a wrong format`;
+    else
+      this._ingredientsColumn.insertAdjacentHTML(
+        'afterbegin',
+        `
+      <h2 class="wrong-format-msg" style="grid-column: 1/-1">The ingredient(s) ${string} is/are in a wrong format.</h2>
+    `
+      );
+
+    //Puts an red border around the box in each wrong element
+    wrongIngredients.forEach(el => {
+      const elBox = document.getElementsByName(`ingredient-${el}`)[0];
+      elBox.style.border = '3px solid #ff0000';
     });
   }
 

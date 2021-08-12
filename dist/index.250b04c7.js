@@ -455,7 +455,7 @@ require('regenerator-runtime/runtime');
 // }
 // Fix SVG parcel problem
 const fixSvgSprite = function () {
-  const arrayAttributes = ['icon-search', 'icon-edit', 'icon-bookmark', 'icon-smile', 'icon-alert-circle', 'icon-smile', 'icon-plus-circle', 'icon-upload-cloud'];
+  const arrayAttributes = ['icon-search', 'icon-edit', 'icon-bookmark', 'icon-smile', 'icon-alert-circle', 'icon-plus-circle', 'icon-upload-cloud'];
   const svgSprites = document.querySelectorAll('use');
   let i = 0;
   svgSprites.forEach(spr => {
@@ -536,6 +536,19 @@ const controlBookmarks = function () {
 };
 const controlAddRecipe = async function (newRecipe) {
   try {
+    // If some ingredient is on wrong format
+    let wrongIngredient = [];
+    for (const [key, value] of Object.entries(newRecipe)) {
+      if (key.startsWith('ingredient') && value) {
+        const string = value.split(',');
+        console.log(string);
+        if (string.length !== 3 || string[2] === '') wrongIngredient.push(key.slice(-1));
+      }
+    }
+    if (wrongIngredient.length !== 0) {
+      _viewsAddRecipeViewDefault.default.ingBadFormat(wrongIngredient);
+      return;
+    }
     _viewsAddRecipeViewDefault.default.renderSpinner();
     await _modelJs.uploadRecipes(newRecipe);
     // render recipe
@@ -2450,6 +2463,7 @@ class AddRecipeView extends _ViewJsDefault.default {
   _overlay = document.querySelector('.overlay');
   _btnOpen = document.querySelector('.nav__btn--add-recipe');
   _btnClose = document.querySelector('.btn--close-modal');
+  _ingredientsColumn = document.querySelector('.ingredients');
   constructor() {
     super();
     this._addHandlerShowWindow();
@@ -2471,12 +2485,31 @@ class AddRecipeView extends _ViewJsDefault.default {
     this._btnClose.addEventListener('click', this._toggleWindow.bind(this));
     this._overlay.addEventListener('click', this._toggleWindow.bind(this));
   }
+  _formEvent() {}
   addHandlerUpload(handler) {
     this._parentElement.addEventListener('submit', function (e) {
       e.preventDefault();
       const dataArr = [...new FormData(this)];
       const data = Object.fromEntries(dataArr);
+      // Removes the red borders
+      let i = 1;
+      while (document.getElementsByName(`ingredient-${i}`)[0]) {
+        document.getElementsByName(`ingredient-${i}`)[0].style.border = '1px solid #ddd';
+        i++;
+      }
       handler(data);
+    });
+  }
+  ingBadFormat(wrongIngredients) {
+    const string = wrongIngredients.join(' ');
+    string.trim();
+    if (document.querySelector('.wrong-format-msg')) document.querySelector('.wrong-format-msg').innerHTML = `The ingredient(s) ${string} is/are in a wrong format`; else this._ingredientsColumn.insertAdjacentHTML('afterbegin', `
+      <h2 class="wrong-format-msg" style="grid-column: 1/-1">The ingredient(s) ${string} is/are in a wrong format.</h2>
+    `);
+    // Puts an red border around the box in each wrong element
+    wrongIngredients.forEach(el => {
+      const elBox = document.getElementsByName(`ingredient-${el}`)[0];
+      elBox.style.border = '3px solid #ff0000';
     });
   }
   _generateMarkup() {
