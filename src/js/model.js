@@ -129,6 +129,17 @@ const clearBookmarks = function () {
   localStorage.clear('bookmarks');
 };
 
+export const sortSearch = function () {
+  console.log(state);
+  state.search.results.sort((A, B) => {
+    for (let i = 0; i < A.title.length; i++) {
+      if (A.title[i] > B.title[i]) return 1;
+      if (B.title[i] > A.title[i]) return -1;
+    }
+    return -1;
+  });
+};
+
 export const uploadRecipes = async function (newRecipe) {
   try {
     const ingredients = Object.entries(newRecipe)

@@ -501,6 +501,12 @@ const controlPagination = function (goToPage) {
   // Render new pagination buttons
   _viewsPaginationViewDefault.default.render(_modelJs.state.search);
 };
+const controlSort = function () {
+  _modelJs.sortSearch();
+  console.log(_modelJs.state.search);
+  _viewsResultsViewDefault.default.render(_modelJs.getSearchResultsPage(_modelJs.state.search.page));
+  _viewsPaginationViewDefault.default.render(_modelJs.state.search);
+};
 const controlServings = function (newServings) {
   _modelJs.updateServings(newServings);
   _viewsRecipeViewDefault.default.update(_modelJs.state.recipe);
@@ -583,7 +589,7 @@ const init = function () {
   _viewsRecipeViewDefault.default.addHandlerUpdateServings(controlServings);
   _viewsRecipeViewDefault.default.addHandlerAddBookmark(controllAddBookmark);
   _viewsSearchViewDefault.default.addHandlerSearch(controlSearchResults);
-  _viewsPaginationViewDefault.default.addHandlerClick(controlPagination);
+  _viewsPaginationViewDefault.default.addHandlerClick(controlPagination, controlSort);
   _viewsAddRecipeViewDefault.default.addHandlerUpload(controlAddRecipe);
   _viewsAddNewIngredientDefault.default.addHandlerAddIngredient(controlAddIngredient);
 };
@@ -615,6 +621,9 @@ _parcelHelpers.export(exports, "deleteBookmark", function () {
 });
 _parcelHelpers.export(exports, "deleteAllBookmarks", function () {
   return deleteAllBookmarks;
+});
+_parcelHelpers.export(exports, "sortSearch", function () {
+  return sortSearch;
 });
 _parcelHelpers.export(exports, "uploadRecipes", function () {
   return uploadRecipes;
@@ -733,6 +742,16 @@ init();
 // Clear bookmarks from local storage
 const clearBookmarks = function () {
   localStorage.clear('bookmarks');
+};
+const sortSearch = function () {
+  console.log(state);
+  state.search.results.sort((A, B) => {
+    for (let i = 0; i < A.title.length; i++) {
+      if (A.title[i] > B.title[i]) return 1;
+      if (B.title[i] > A.title[i]) return -1;
+    }
+    return -1;
+  });
 };
 const uploadRecipes = async function (newRecipe) {
   try {
@@ -2320,12 +2339,17 @@ var _urlImgIconsSvgDefault = _parcelHelpers.interopDefault(_urlImgIconsSvg);
 // Parcel 2
 class PaginationView extends _ViewJsDefault.default {
   _parentElement = document.querySelector('.pagination');
-  addHandlerClick(handler) {
+  addHandlerClick(handler, sortController) {
     this._parentElement.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--inline');
+      const sort = e.target.closest('.btn--sort');
+      if (sort) {
+        sortController();
+        return;
+      }
       if (!btn) return;
       const goToPage = +btn.dataset.goto;
-      handler(goToPage);
+      handler(goToPage, btn);
     });
   }
   _generateMarkup() {
@@ -2338,12 +2362,16 @@ class PaginationView extends _ViewJsDefault.default {
       <div class="n-pages">
         Page ${currPage} of ${numPages}
       </div>
-        <button data-goto="${currPage + 1}" class="btn--inline pagination__btn--next">
-          <span>Page ${currPage + 1}</span>
-          <svg class="search__icon">
-            <use href="${_urlImgIconsSvgDefault.default}#icon-arrow-right"></use>
-          </svg>
-        </button>
+      <button data-goto="${currPage + 1}" class="btn--inline pagination__btn--next">
+        <span>Page ${currPage + 1}</span>
+        <svg class="search__icon">
+          <use href="${_urlImgIconsSvgDefault.default}#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div></div>
+      <button class="btn--inline btn--sort">
+        Sort
+      </button>
       `;
     }
     // Last page
@@ -2358,6 +2386,11 @@ class PaginationView extends _ViewJsDefault.default {
         <div class="n-pages">
           Page ${currPage} of ${numPages}
         </div>
+        <div></div>
+        <div></div>
+        <button class="btn--inline btn--sort">
+          Sort
+        </button>
       `;
     }
     // Other page
@@ -2378,6 +2411,10 @@ class PaginationView extends _ViewJsDefault.default {
             <use href="${_urlImgIconsSvgDefault.default}#icon-arrow-right"></use>
           </svg>
         </button>
+        <div></div>
+        <button class="btn--inline btn--sort">
+          Sort
+        </button>
       `;
     }
     // Page 1, and there are NO other pages
@@ -2385,7 +2422,12 @@ class PaginationView extends _ViewJsDefault.default {
     <div></div>
     <div class="n-pages">
       Page ${currPage} of ${numPages}
-    </div>`;
+    </div>
+    <div></div>
+    <div></div>
+    <button class="btn--inline btn--sort">
+      Sort
+    </button>`;
   }
 }
 exports.default = new PaginationView();

@@ -21,3 +21,4 @@ Features made by me alone (used JS, scss and html):
 2. Button to delete all the bookmarks
 3. Number of pages appearing on pagination
 4. Ingredient validation
+5. Sort search alphabetically

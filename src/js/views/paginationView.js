@@ -4,13 +4,18 @@ import icons from 'url:../../img/icons.svg'; // Parcel 2
 class PaginationView extends View {
   _parentElement = document.querySelector('.pagination');
 
-  addHandlerClick(handler) {
+  addHandlerClick(handler, sortController) {
     this._parentElement.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--inline');
+      const sort = e.target.closest('.btn--sort');
+      if (sort) {
+        sortController();
+        return;
+      }
       if (!btn) return;
 
       const goToPage = +btn.dataset.goto;
-      handler(goToPage);
+      handler(goToPage, btn);
     });
   }
 
@@ -27,14 +32,18 @@ class PaginationView extends View {
       <div class="n-pages">
         Page ${currPage} of ${numPages}
       </div>
-        <button data-goto="${
-          currPage + 1
-        }" class="btn--inline pagination__btn--next">
-          <span>Page ${currPage + 1}</span>
-          <svg class="search__icon">
-            <use href="${icons}#icon-arrow-right"></use>
-          </svg>
-        </button>
+      <button data-goto="${
+        currPage + 1
+      }" class="btn--inline pagination__btn--next">
+        <span>Page ${currPage + 1}</span>
+        <svg class="search__icon">
+          <use href="${icons}#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div></div>
+      <button class="btn--inline btn--sort">
+        Sort
+      </button>
       `;
     }
 
@@ -52,6 +61,11 @@ class PaginationView extends View {
         <div class="n-pages">
           Page ${currPage} of ${numPages}
         </div>
+        <div></div>
+        <div></div>
+        <button class="btn--inline btn--sort">
+          Sort
+        </button>
       `;
     }
 
@@ -77,6 +91,10 @@ class PaginationView extends View {
             <use href="${icons}#icon-arrow-right"></use>
           </svg>
         </button>
+        <div></div>
+        <button class="btn--inline btn--sort">
+          Sort
+        </button>
       `;
     }
 
@@ -85,7 +103,12 @@ class PaginationView extends View {
     <div></div>
     <div class="n-pages">
       Page ${currPage} of ${numPages}
-    </div>`;
+    </div>
+    <div></div>
+    <div></div>
+    <button class="btn--inline btn--sort">
+      Sort
+    </button>`;
   }
 }
 

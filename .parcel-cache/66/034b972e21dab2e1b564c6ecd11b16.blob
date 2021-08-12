@@ -751,3 +751,12 @@ body {
   font-size: 14px;
   text-align: center;
 }
+
+.btn--sort {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
