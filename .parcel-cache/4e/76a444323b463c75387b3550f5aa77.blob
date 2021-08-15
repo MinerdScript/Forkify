@@ -1,0 +1,30 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "API_URL", function () {
+  return API_URL;
+});
+_parcelHelpers.export(exports, "TIMEOUT_SEC", function () {
+  return TIMEOUT_SEC;
+});
+_parcelHelpers.export(exports, "RES_PER_PAGE", function () {
+  return RES_PER_PAGE;
+});
+_parcelHelpers.export(exports, "MODAL_CLOSE_SEC", function () {
+  return MODAL_CLOSE_SEC;
+});
+_parcelHelpers.export(exports, "API_KEY", function () {
+  return API_KEY;
+});
+_parcelHelpers.export(exports, "API_NUTR_URL", function () {
+  return API_NUTR_URL;
+});
+_parcelHelpers.export(exports, "API_NUTR_KEY", function () {
+  return API_NUTR_KEY;
+});
+const API_URL = 'https://forkify-api.herokuapp.com/api/v2/recipes/';
+const TIMEOUT_SEC = 10;
+const RES_PER_PAGE = 10;
+const MODAL_CLOSE_SEC = 2.5;
+const API_KEY = '97ba1286-198e-4ba9-8922-c6323a2ee9a6';
+const API_NUTR_URL = `https://api.spoonacular.com/food/ingredients/`;
+const API_NUTR_KEY = `apiKey=8de2c772c3cd4e0dbdc31bfe604bd2f5`;

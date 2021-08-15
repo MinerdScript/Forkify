@@ -14,10 +14,10 @@ import icons from 'url:../img/icons.svg';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
-//Makes the page stop reloading everytime you save anything, from parcel
-// if (module.hot) {
-//   module.hot.accept();
-// }
+// Makes the page stop reloading everytime you save anything, from parcel
+if (module.hot) {
+  module.hot.accept();
+}
 
 //Fix SVG parcel problem
 const fixSvgSprite = function () {
@@ -53,9 +53,8 @@ const controlRecipes = async function () {
 
     //1) Loading recipe
     await model.loadRecipe(id);
-    const { recipe } = model.state;
 
-    //2) Rendering recipe
+    //3) Rendering recipe
     recipeView.render(model.state.recipe);
   } catch (err) {
     recipeView.renderError();

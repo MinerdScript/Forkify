@@ -22,3 +22,6 @@ Features made by me alone (used JS, scss and html):
 3. Number of pages appearing on pagination
 4. Ingredient validation
 5. Sort search alphabetically
+6. Used spoonocular API to see how mach calories is each ingredient (that means i had to use promises)
+
+Be aware, spoonocular doesn't work after 150 points, because i am using the API free. That means the calories will not appear after used 150 points in my key.

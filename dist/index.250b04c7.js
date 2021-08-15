@@ -450,9 +450,9 @@ var _urlImgIconsSvgDefault = _parcelHelpers.interopDefault(_urlImgIconsSvg);
 require('core-js/stable');
 require('regenerator-runtime/runtime');
 // Makes the page stop reloading everytime you save anything, from parcel
-// if (module.hot) {
-// module.hot.accept();
-// }
+if (module.hot) {
+  module.hot.accept();
+}
 // Fix SVG parcel problem
 const fixSvgSprite = function () {
   const arrayAttributes = ['icon-search', 'icon-edit', 'icon-bookmark', 'icon-smile', 'icon-alert-circle', 'icon-plus-circle', 'icon-upload-cloud'];
@@ -474,8 +474,7 @@ const controlRecipes = async function () {
     _viewsBookmarksViewDefault.default.update(_modelJs.state.bookmarks);
     // 1) Loading recipe
     await _modelJs.loadRecipe(id);
-    const {recipe} = _modelJs.state;
-    // 2) Rendering recipe
+    // 3) Rendering recipe
     _viewsRecipeViewDefault.default.render(_modelJs.state.recipe);
   } catch (err) {
     _viewsRecipeViewDefault.default.renderError();
@@ -657,10 +656,65 @@ const createRecipeObject = function (data) {
     })
   };
 };
+// get the id of each ingredient
+const loadIdIng = async function (ingredient) {
+  try {
+    const dataIng = await _helpersJs.AJAX(`${_configJs.API_NUTR_URL}search?query=${ingredient.description}&${_configJs.API_NUTR_KEY}`);
+    if (!dataIng) throw new Error();
+    const ingOnData = dataIng.results.find(ing => ing.name === ingredient.description);
+    if (!ingOnData) return;
+    const id = ingOnData.id;
+    return id;
+  } catch (err) {
+    throw err;
+  }
+};
+// get the calories of each ingredient
+const loadCalIng = async function (ing) {
+  try {
+    if (!ing.id) return;
+    const dataCal = await _helpersJs.AJAX(`${_configJs.API_NUTR_URL}${ing.id}/information?amount=${ing.quantity}&unit=${ing.unit}&${_configJs.API_NUTR_KEY}`);
+    if (!dataCal) throw new Error();
+    ing.calories = dataCal.nutrition.nutrients.find(nutrient => nutrient.title === 'Calories');
+    ing.calories = ing.calories.amount;
+    return ing.calories;
+  } catch (err) {
+    throw err;
+  }
+};
 const loadRecipe = async function (id) {
   try {
     const data = await _helpersJs.AJAX(`${_configJs.API_URL}${id}`);
     state.recipe = createRecipeObject(data);
+    (async function () {
+      try {
+        // Nutrition information using spoonacular API
+        const objIng = state.recipe.ingredients.map(ingredient => {
+          const ingredientObject = {
+            description: ingredient.description.toLowerCase(),
+            quantity: +ingredient.quantity,
+            unit: ingredient.unit.toLowerCase()
+          };
+          return ingredientObject;
+        });
+        // Gets ingredient's ID
+        await Promise.all(objIng.map(loadIdIng)).then(values => {
+          for (const [i, ing] of objIng.entries()) {
+            ing.id = values[i];
+          }
+        });
+        // Gets ingredient's calories
+        await Promise.all(objIng.map(loadCalIng)).then(values => {
+          for (const [i, ing] of objIng.entries()) {
+            console.log(values);
+            ing.calories = values[i];
+          }
+        });
+        for (const [i, ingredient] of state.recipe.ingredients.entries()) {
+          state.recipe.ingredients[i].calories = objIng[i].calories;
+        }
+      } catch (error) {}
+    });
     if (state.bookmarks.some(bookmark => bookmark.id === id)) state.recipe.bookmarked = true; else state.recipe.bookmarked = false;
   } catch (err) {
     throw err;
@@ -1556,11 +1610,19 @@ _parcelHelpers.export(exports, "MODAL_CLOSE_SEC", function () {
 _parcelHelpers.export(exports, "API_KEY", function () {
   return API_KEY;
 });
+_parcelHelpers.export(exports, "API_NUTR_URL", function () {
+  return API_NUTR_URL;
+});
+_parcelHelpers.export(exports, "API_NUTR_KEY", function () {
+  return API_NUTR_KEY;
+});
 const API_URL = 'https://forkify-api.herokuapp.com/api/v2/recipes/';
 const TIMEOUT_SEC = 10;
 const RES_PER_PAGE = 10;
 const MODAL_CLOSE_SEC = 2.5;
-const API_KEY = '88c690c0-e072-438c-a5af-bbc2c6b17692';
+const API_KEY = '97ba1286-198e-4ba9-8922-c6323a2ee9a6';
+const API_NUTR_URL = `https://api.spoonacular.com/food/ingredients/`;
+const API_NUTR_KEY = `apiKey=8de2c772c3cd4e0dbdc31bfe604bd2f5`;
 
 },{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
 "use strict";
@@ -1752,7 +1814,7 @@ class RecipeView extends _ViewJsDefault.default {
         <div class="recipe__quantity">${ing.quantity ? new _fractional.Fraction(ing.quantity).toString() : ''}</div>
         <div class="recipe__description">
           <span class="recipe__unit">${ing.unit}</span>
-          ${ing.description}
+          ${ing.description} ${ing.calories ? `(${ing.calories} kcal)` : ''} 
         </div>
       </li>`;
   }

@@ -132,7 +132,7 @@ class RecipeView extends View {
         }</div>
         <div class="recipe__description">
           <span class="recipe__unit">${ing.unit}</span>
-          ${ing.description}
+          ${ing.description} ${ing.calories ? `(${ing.calories} kcal)` : ''} 
         </div>
       </li>`;
   }

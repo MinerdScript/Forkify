@@ -1,5 +1,11 @@
 import { async } from 'regenerator-runtime';
-import { API_KEY, API_URL, RES_PER_PAGE } from './config.js';
+import {
+  API_KEY,
+  API_URL,
+  RES_PER_PAGE,
+  API_NUTR_URL,
+  API_NUTR_KEY,
+} from './config.js';
 import { AJAX } from './helpers.js';
 
 export const state = {
@@ -28,10 +34,78 @@ const createRecipeObject = function (data) {
   };
 };
 
+//get the id of each ingredient
+const loadIdIng = async function (ingredient) {
+  try {
+    const dataIng = await AJAX(
+      `${API_NUTR_URL}search?query=${ingredient.description}&${API_NUTR_KEY}`
+    );
+    if (!dataIng) throw new Error();
+    const ingOnData = dataIng.results.find(
+      ing => ing.name === ingredient.description
+    );
+    if (!ingOnData) return;
+    const id = ingOnData.id;
+    return id;
+  } catch (err) {
+    throw err;
+  }
+};
+
+//get the calories of each ingredient
+const loadCalIng = async function (ing) {
+  try {
+    if (!ing.id) return;
+    const dataCal = await AJAX(
+      `${API_NUTR_URL}${ing.id}/information?amount=${ing.quantity}&unit=${ing.unit}&${API_NUTR_KEY}`
+    );
+    if (!dataCal) throw new Error();
+    ing.calories = dataCal.nutrition.nutrients.find(
+      nutrient => nutrient.title === 'Calories'
+    );
+    ing.calories = ing.calories.amount;
+    return ing.calories;
+  } catch (err) {
+    throw err;
+  }
+};
+
 export const loadRecipe = async function (id) {
   try {
     const data = await AJAX(`${API_URL}${id}`);
     state.recipe = createRecipeObject(data);
+
+    (async function () {
+      try {
+        //Nutrition information using spoonacular API
+        const objIng = state.recipe.ingredients.map(ingredient => {
+          const ingredientObject = {
+            description: ingredient.description.toLowerCase(),
+            quantity: +ingredient.quantity,
+            unit: ingredient.unit.toLowerCase(),
+          };
+          return ingredientObject;
+        });
+
+        //Gets ingredient's ID
+        await Promise.all(objIng.map(loadIdIng)).then(values => {
+          for (const [i, ing] of objIng.entries()) {
+            ing.id = values[i];
+          }
+        });
+
+        //Gets ingredient's calories
+        await Promise.all(objIng.map(loadCalIng)).then(values => {
+          for (const [i, ing] of objIng.entries()) {
+            console.log(values);
+            ing.calories = values[i];
+          }
+        });
+        for (const [i, ingredient] of state.recipe.ingredients.entries()) {
+          state.recipe.ingredients[i].calories = objIng[i].calories;
+        }
+      } catch (error) {}
+    });
 
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
